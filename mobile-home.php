@@ -1,10 +1,11 @@
-<title>NT Grup</title>
+<title>NT Grup - Metala</title>
 <meta http-equiv="Cache-Control" content="no-cache">
 <!-- перед выклаыванием стоит удаление строку с верху чтобы страница кешировалась-->
 <meta name="viewport" content="width=device-width, initial-scale=1, height=device-height">
 <link rel="alternate" hreflang="ru" href="ru" />
 <link rel="alternate" hreflang="en" href="en" />
 <link rel="alternate" hreflang="lv" href="lv" />
+<link rel="stylesheet" href="normalize.css">
 <script src='../mob-js.js'></script>
 <link rel='stylesheet' type='text/css' href='../mob-style.css'>
 </head>

@@ -1,84 +1,95 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<title>EROR 404</title>
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-</head>
-<style>
-	@font-face{
-		font-family: 'hacked';
-    	src: url('fonts/HACKED.ttf');    
-	}
-	@keyframes tix {
-		0% {color:red;}
-		100% {color:#ffffff;}
-	}
-	body{
-		margin: 0;
-		padding: 0;
-	}
-	#bacgk{
-		background: radial-gradient( circle, rgba(255,0,0,1),rgba(150,0,0,1));
-		overflow:hidden; 
-		margin: 0;
-		padding: 0;
-		height:100vh;
-		width:100vw;
-	}
-	
-	#message{
-		width:50vw;
-		height:30vh;
-		font-size: 2em;
-		position: absolute;
-		top:35vh;
-		left:25vw;
-		color:white;
-		z-index:100;
-		text-align: center;
-	}
-	#err{
-		font-size: 5em;
-		font-family: 'hacked';
-		width:content;
-		display: inline-block;
-		line-height: 70%;
-	}
-	input{
-		position:absolute;
-		z-index: 99;
-		top:0;
-		left:100px;
-	}	
-</style>
-<body>
-	<div id="bacgk">
-		<div id="err">
-			<span class="err">EROR 404</span>
+	<head>
+		<meta charset="utf-8" />
+		<title>EROR 404</title>
+		<script
+			type="text/javascript"
+			src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"
+		></script>
+	</head>
+	<style>
+		@font-face {
+			font-family: "hacked";
+			src: url("fonts/HACKED.ttf");
+		}
+		@keyframes tix {
+			0% {
+				color: red;
+			}
+			100% {
+				color: #ffffff;
+			}
+		}
+		body {
+			margin: 0;
+			padding: 0;
+		}
+		#bacgk {
+			background: radial-gradient(
+				circle,
+				rgba(255, 0, 0, 1),
+				rgba(150, 0, 0, 1)
+			);
+			overflow: hidden;
+			margin: 0;
+			padding: 0;
+			height: 100vh;
+			width: 100vw;
+		}
+
+		#message {
+			width: 50vw;
+			height: 30vh;
+			font-size: 2em;
+			position: absolute;
+			top: 35vh;
+			left: 25vw;
+			color: white;
+			z-index: 100;
+			text-align: center;
+		}
+		#err {
+			font-size: 5em;
+			font-family: "hacked";
+			width: content;
+			display: inline-block;
+			line-height: 70%;
+		}
+		input {
+			position: absolute;
+			z-index: 99;
+			top: 0;
+			left: 100px;
+		}
+	</style>
+	<body>
+		<div id="bacgk">
+			<div id="err">
+				<span class="err">EROR 404</span>
+			</div>
 		</div>
-	</div>
-	<script>
-		var p, i;
-		p = $(window).height() / $("span").height() * 50;
-		i = 0;
-		function but(){
-			var timer = setInterval(function(){
-				if( i > p ){
-					clearInterval(timer);
-					console.log("done")
-				}else{
-					i += 1;
-					document.getElementById("err").innerHTML += "<span class='err'>EROR 404</span> ";
-					console.log(i+"pcs")
-				}
-				
-			},100)
-		};
-		but()
-</script>
-	<div id="message">
-		<a href = "index.php" style="color:white;">NtGrup.lv</a>
-	</div>
-</body>
+		<script>
+			var p, i;
+			p = ($(window).height() / $("span").height()) * 50;
+			i = 0;
+			function but() {
+				var timer = setInterval(function () {
+					if (i > p) {
+						clearInterval(timer);
+						console.log("done");
+					} else {
+						i += 1;
+						document.getElementById("err").innerHTML +=
+							"<span class='err'>EROR 404</span> ";
+						console.log(i + "pcs");
+					}
+				}, 100);
+			}
+			but();
+		</script>
+		<div id="message">
+			<a href="/.." style="color: white">NtGrup.lv</a>
+		</div>
+	</body>
 </html>
