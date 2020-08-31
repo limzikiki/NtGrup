@@ -1,0 +1,174 @@
+body {
+background-color:#fff;
+font-size:10pt;
+font-family:Arial;
+margin:0;
+padding:0;
+color:#224477;
+}
+
+#page {
+width:900px;
+background:url(images/page.png) center 0 repeat-y;
+margin:auto;
+padding:auto;
+}
+
+#header {
+clear:both;
+width:900px;
+height:126px;
+background:url(images/header.png) center 0 no-repeat;
+text-align:center;
+padding-top:10px;
+
+}
+
+#langmenu{
+float:right;
+width:16px;
+margin-right:80px;
+}
+
+#langmenu ul{
+list-style-type:none;
+}
+#langmenu ul li{
+margin:3px 0;
+}
+
+#sidebarnav ul
+{
+list-style-type:none;
+margin:0;
+padding:0;
+}
+
+#sidebarnav {
+width:218px;
+margin-top:10px;
+margin-left:29px;
+padding-bottom:10px;
+}
+  
+#sidebarnav a {
+	width:206px;
+	display:block;
+	clear:both;
+	padding-right:12px;
+	padding-top:6px;
+	height:25px;
+	color:#FFFFFF;
+	text-decoration:none;
+	font-size:14px;
+	font-weight:bold;
+	margin-top:3px;
+	text-align:right;
+  }
+  
+#sidebarnav ul li ul{
+display:none;
+}
+#sidebarnav ul li:hover ul{
+display:block;
+}
+  
+#sidebarnav a:hover, #sidebarnav a.active {
+	background-color:#224477;
+	text-decoration:none;
+	color:#FFFFFF;
+}
+
+.widget {
+	padding-left:15px;
+	padding-right:15px;
+	padding-bottom:15px;
+}
+
+#mainarea {
+width:860px;
+clear:both;
+padding-left:30px;
+}
+
+#contentarea {
+width:540px;
+padding-left:20px;
+padding-bottom:20px;
+float:left;
+line-height:14pt;
+padding-top:5px;
+}
+
+#sidebar {
+float:left;
+width:270px;
+line-height:14pt;
+color:#FFFFFF;
+}
+
+#footer {
+width:900px;
+clear:both;
+height:72px;
+padding-top:24px;
+line-height:14pt;
+background:url(images/footer.png) center 0 repeat;
+background-repeat:no-repeat;
+color:#FFFFFF;
+}
+#footer-contacts{
+text-align:center;
+}
+#copyright{
+padding-right:40px;
+text-align:right;
+font-size:10px;
+}
+
+#footer a {
+color:#FFFFFF;
+}
+
+h1, h1 a {
+font-size:23pt;
+color:#6E7D8F;
+margin:0;
+}
+
+h2 {
+font-size:15pt;
+color:#444455;
+padding-top:6px;
+}
+
+#sidebar h2 {
+font-size:15pt;
+padding-left:10px;
+color:#FFFFFF;
+padding-top:6px;
+}
+
+.description {
+font-size:14pt;
+color:#FFFFFF;
+padding-left:5px;
+}
+
+a {
+color:#FFFFFF;
+text-decoration:none;
+}
+
+#sidebar a {
+color:#FFFFFF;
+}
+
+a:hover {
+text-decoration:underline;
+}
+#share42 {display: inline-block; margin: 265px 0px 0px 45px; padding: 6px 0 0 6px; background: #e6e6e6; border: 1px solid #E9E9E9; border-radius: 4px;}
+#share42:hover {background: #F6F6F6; border: 1px solid #D4D4D4; box-shadow: 0 0 5px #DDD;}
+#share42 a {opacity: 0.5}
+#share42:hover a {opacity: 0.7}
+#share42 a:hover {opacity: 1}

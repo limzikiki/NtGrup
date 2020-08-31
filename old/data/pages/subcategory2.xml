@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item><pubDate>Tue, 20 Dec 2011 13:33:06 -0500</pubDate><title><![CDATA[Gates]]></title><url><![CDATA[subcategory2]]></url><meta><![CDATA[]]></meta><metad><![CDATA[]]></metad><template><![CDATA[template.php]]></template><content><![CDATA[&lt;p&gt;
+	(% gallery name=Subcat2 %)&lt;/p&gt;
+]]></content><parent><![CDATA[gallery]]></parent><menuOrder><![CDATA[1]]></menuOrder><menu><![CDATA[]]></menu><menuStatus><![CDATA[Y]]></menuStatus><private><![CDATA[]]></private></item>

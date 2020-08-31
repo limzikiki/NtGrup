@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item><pubDate>Tue, 20 Dec 2011 12:55:43 -0500</pubDate><title>NTGrup</title><url>index</url><meta>getsimple, easy, content management system</meta><metad></metad><template>template.php</template><content>&amp;lt;p&amp;gt;
+	(% gallery name=slider %)&amp;lt;/p&amp;gt;
+&amp;lt;p&amp;gt;
+	We welcome you to our website and thank you for choosing our company as a potential business partner. Our company since 2008, designs, manufactures and assembles a variety of structures made of metal.&amp;lt;/p&amp;gt;
+</content><parent></parent><menu>Home</menu><menuStatus>Y</menuStatus><private></private><menuOrder><![CDATA[0]]></menuOrder></item>

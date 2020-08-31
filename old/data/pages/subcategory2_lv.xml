@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item><pubDate>Tue, 20 Dec 2011 13:41:11 -0500</pubDate><title><![CDATA[Vārti]]></title><url><![CDATA[subcategory2_lv]]></url><meta><![CDATA[]]></meta><metad><![CDATA[]]></metad><menuOrder><![CDATA[0]]></menuOrder><template><![CDATA[template.php]]></template><content><![CDATA[&lt;p&gt;
+	(% gallery name=Subcat2 %)&lt;/p&gt;
+]]></content><parent><![CDATA[]]></parent><menu><![CDATA[]]></menu><menuStatus><![CDATA[Y]]></menuStatus><private><![CDATA[]]></private></item>
