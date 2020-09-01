@@ -39,7 +39,11 @@ $contacts = cockpit('collections')->find('contacts');
 $form_translation = cockpit('collections')->find('leave_message');
 $gallery = cockpit('singletons')->getData('gallery');
 
-usort($products, function($i1, $i2){
+foreach ($gallery["image"] as &$value) {
+    $value["path"] = "." . $value["path"];
+}
+
+usort($products, function ($i1, $i2) {
     return $i1['_o'] <=> $i2["_o"];
 });
 

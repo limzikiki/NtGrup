@@ -1,17 +1,4 @@
 $(function () {
-	function findGetParameter(parameterName) {
-		var result = null,
-			tmp = [];
-		location.search
-			.substr(1)
-			.split("&")
-			.forEach(function (item) {
-				tmp = item.split("=");
-				if (tmp[0] === parameterName)
-					result = decodeURIComponent(tmp[1]);
-			});
-		return result;
-	}
 	window.t = $(".tiltle");
 	var ImgHeight = $("#img").height();
 	function sizes() {
@@ -27,8 +14,6 @@ $(function () {
 
 		BrowserWidth = $(window).width();
 
-		var textSize = (BrowserWidth / 100) * 2;
-		var h1Size = (BrowserWidth / 100) * 4;
 		$("#precomp").width(BrowserWidth);
 
 		$(".lg").width(BrowserWidth / 8.99);
@@ -37,7 +22,7 @@ $(function () {
 	}
 
 	var p = 0;
-	var f = $(".companies").width() * 0.55; //длина прокрутки больше число тем больше выйдет
+	const f = $(".companies").width() * 0.55; //длина прокрутки больше число тем больше выйдет
 	var s = 0;
 
 	setInterval(function () {
@@ -57,24 +42,23 @@ $(function () {
 
 	var HH = $("section").height + 10;
 	$("#aboutus").css("margin-top", HH);
-	$(document).ready(sizes());
 	$(document).ready(function () {
-		if (findGetParameter("message_status") == 1) {
-			alert(
-				" Jūsu vestule bija nosutita\n Ваше сообщение было успешно отправлени\n Your message has been sent"
-			);
-		} else if (findGetParameter("message_status") == 0) {
-			alert(
-				"Попробуйте отправить еще раз \n Попробуйте отправить еще раз \n Try to send the message one more time "
-			);
-		}
+		$("#galleryMenu").slick({
+			centerMode: true,
+			variableWidth: true,
+			focusOnSelect: true,
+			autoplay: true,
+			dots: true,
+			autoplaySpeed: 2000,
+		});
 	});
+	sizes();
 	$(window).resize(function () {
 		sizes();
 	});
 	var url;
 	var picDonwloadTime = 500;
-	$(".phImg").click(function () {
+	/*$(".phImg").click(function () {
 		if (url !== $(this).attr("src")) {
 			url = $(this).attr("src");
 			$("#photo").animate(
@@ -103,7 +87,7 @@ $(function () {
 		} else {
 			console.log("crash");
 		}
-	});
+	});*/
 	if ($(window).scrollTop() > FadeOfMenu) {
 		$("#menu").addClass("opmenu");
 	} else {

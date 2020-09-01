@@ -6,8 +6,9 @@
 <link rel="alternate" hreflang="en" href="en" />
 <link rel="alternate" hreflang="lv" href="lv" />
 <link rel="stylesheet" href="normalize.css">
-<script src='../mob-js.js'></script>
-<link rel='stylesheet' type='text/css' href='../mob-style.css'>
+<script src='./mob-js.js'></script>
+<link rel='stylesheet' type='text/css' href='./mob-style.css'>
+
 </head>
 
 <body>
@@ -31,7 +32,7 @@
             </svg>
         </div>
         <div id="background">
-            <img src="<?php echo '../cockpit/storage/uploads' . $background['image']['path']; ?>" id="img">
+            <img src="<?php echo './cockpit/storage/uploads' . $background['image']['path']; ?>" id="img">
         </div>
         <div id="about">
             <div id="aboutContent" class="content">
@@ -48,32 +49,32 @@
         </script>
         <div id="companies">
             <div class="logos">
-                <img src="../data/mblogo/idl.png" class="lg" id="">
+                <img src="./data/mblogo/idl.png" class="lg" id="">
             </div>
             <div class="logos">
-                <img src="../data/mblogo/velve.png" class="lg" id="">
+                <img src="./data/mblogo/velve.png" class="lg" id="">
             </div>
             <div class="logos">
-                <img src="../data/mblogo/lnk.png" class="lg" id="">
+                <img src="./data/mblogo/lnk.png" class="lg" id="">
             </div>
             <div class="logos">
-                <img src="../data/mblogo/laima.png" class="lg" id="">
+                <img src="./data/mblogo/laima.png" class="lg" id="">
             </div>
             <div class="logos">
-                <img src="../data/mblogo/logo.png" class="lg" id="">
+                <img src="./data/mblogo/logo.png" class="lg" id="">
             </div>
             <div class="logos">
-                <img src="../data/mblogo/car.png" class="lg" id="">
+                <img src="./data/mblogo/car.png" class="lg" id="">
             </div>
             <div class="logos">
-                <img src="../data/mblogo/gut.png" class="lg" id="">
+                <img src="./data/mblogo/gut.png" class="lg" id="">
             </div>
         </div>
         <div id="products">
             <div id="prodContent" class="content">
                 <div class="prod">
                     <div class="frameProd">
-                        <img src="../data/hangar.jpg" class="prodImg">
+                        <img src="./data/hangar.jpg" class="prodImg">
                         <div class="prodText">
                             <?= $products[0]["content$lan"] ?>
                         </div>
@@ -81,7 +82,7 @@
                 </div>
                 <div class="prod">
                     <div class="frameProd">
-                        <img src="../data/welding.jpg" class="prodImg">
+                        <img src="./data/welding.jpg" class="prodImg">
                         <div class="prodText">
                             <?= $products[1]["content$lan"] ?>
                         </div>

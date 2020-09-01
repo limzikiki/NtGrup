@@ -1,5 +1,6 @@
 ﻿:root {
 	--bg-color: #fafafa /*F5FFFA*/;
+	--bg-color-transparent: #fafafaaa;
 	--txt-color: #111;
 	--attention: #d51d6b;
 	--secondary_collor: #555;
@@ -26,9 +27,10 @@ div {
 	z-index: 13;
 	width: 100%;
 	position: fixed;
-	background: rgba(245, 255, 250, 0.7);
+	background: var(--bg-color-transparent);
 	padding: 0.5vh;
-	border-bottom: 0px solid rgba(81, 81, 81, 0.5);
+	border-bottom: 0px solid rgba(81, 81, 81, 0.1);
+	transition: border 1s ease-in-out;
 }
 
 #menu-wrap {
@@ -231,15 +233,6 @@ p {
 	z-index: 9;
 }
 
-#prod1 {
-	text-align: left;
-	text-align-last: left;
-}
-
-#prod3 {
-	text-align: justify;
-}
-
 .text {
 	white-space: nowrap;
 	font-size: 1em;
@@ -302,94 +295,8 @@ p {
 	-ms-flex-align: center;
 	align-items: center;
 }
-
-#gallery {
-	background-color: var(--bg-color);
-	width: 100%;
-	color: var(--txt-color);
-	padding-top: 0.5%;
-	padding-bottom: 3%;
-	-webkit-transition-duration: 3s;
-	-o-transition-duration: 3s;
-	transition-duration: 3s;
-}
-
-#galleryTitle {
-	font-size: 4em;
-}
-#galleryTitle,
-#messageTitle {
-	margin: 0;
-	padding-bottom: 0.5em;
-	color: var(--attention);
-}
-
-#photDisp {
-	width: 100%;
-	overflow: hidden;
-}
-
-#photo {
-	/*-webkit-filter: drop-shadow(0 3px 5px rgba(0,0,0,.8));
-    filter: drop-shadow(0 3px 5px rgba(0,0,0,.8));*/
-	max-width: 90vw;
-	max-height: 80vh;
-	position: relative;
-}
-
-.ph {
-	height: 5vw;
-	width: 100%;
-}
-
 .phImg {
-	height: 100%;
-	width: auto;
-	/*-webkit-filter: drop-shadow(0 2px 5px rgba(0,0,0,0.5));
-    filter: drop-shadow(0 2px 5px rgba(0,0,0,0.5));*/
-}
-
-.phMenu {
-	width: content;
-	/*border: 1vmin solid black*/
-	display: inline-block;
-	border: 1vmin solid transparent;
-}
-
-.phImg:hover {
-	-webkit-filter: drop-shadow(0 1px 2px gray);
-	filter: drop-shadow(0 1px 2px gray);
-	cursor: pointer;
-}
-
-.phComent {
-	text-align: center;
-}
-
-#photMenu {
-	overflow: auto;
-	white-space: nowrap;
-}
-
-#photMenu::-webkit-scrollbar {
-	width: 12px;
-	background: rgba(255, 255, 255, 0.7);
-}
-
-#photMenu::-webkit-scrollbar-track {
-	border-radius: 10px;
-}
-
-#photMenu::-webkit-scrollbar-thumb {
-	background: rgba(0, 0, 0, 0.3);
-}
-
-#photMenu::-webkit-scrollbar-thumb:hover {
-	background: rgba(0, 0, 0, 0.4);
-}
-
-#photMenu::-webkit-scrollbar-thumb:active {
-	background: rgba(0, 0, 0, 0.6);
+	max-height: 40vh;
 }
 
 #message_block {

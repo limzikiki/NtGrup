@@ -7,7 +7,7 @@ $(function(){
     var orientation;
 	function dependentValuesByOrientation(){
         $("#img").css({ "left": -(($("#img").width() - $(window).width()) / 2) });
-        if ($(window).height() >= $(window).width() {
+        if ($(window).height() >= $(window).width()) {
             orientation = 1; // vertically
         } else {
             orientation = 0; // horizontally

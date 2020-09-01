@@ -1,17 +1,21 @@
-		<script src='../js.js'></script>
-		<link rel='stylesheet' type='text/css' href='../style.css'>
-		<title>NT Grup</title>
+		<script src='./js.js'></script>
+		<link rel='stylesheet' type='text/css' href='./style.css'>
+		<title>NT Grup - Metālkonstrukcijas</title>
 		<meta name="theme-color" contents="#9CC2CE">
 		<link rel="alternate" hreflang="ru" href="ru/" />
 		<link rel="alternate" hreflang="en" href="en" />
 		<link rel="alternate" hreflang="lv" href="lv" />
+		<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+		<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+		<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
 		</head>
 
 		<body>
 			<section id="menu">
 				<div id='menu-wrap'>
 					<li class="menuval logo">
-						<img src="../data/logs.png " id="logo">
+						<img src="./data/logs.png " id="logo">
 					</li>
 					<li class="menuval">
 						<a class="mainlevel js-navLink" href="#aboutus"><?= $navigation[0]['title' . $lan] ?></a>
@@ -38,7 +42,7 @@
 					</li>
 				</div>
 			</section>
-			<img src="<?php echo '../cockpit/storage/uploads' . $background['image']['path']; ?>" id="img">
+			<img src="<?php echo './cockpit/storage/uploads' . $background['image']['path']; ?>" id="img">
 			<div class="premain">
 				<div class="main">
 					<div id="aboutus" align="justify">
@@ -60,31 +64,31 @@
 							<div class="companies">
 								<div id="logocontainer">
 									<div class="logos">
-										<img src="../data/logos/laima.png" class="lg" id="">
+										<img src="./data/logos/laima.png" class="lg" id="">
 									</div>
 									<div class="logos" id="">
-										<img src="../data/logos/gut.png" class="lg" id="">
+										<img src="./data/logos/gut.png" class="lg" id="">
 									</div>
 									<div class="logos">
-										<img src="../data/logos/lnk.png" class="lg" id="">
+										<img src="./data/logos/lnk.png" class="lg" id="">
 									</div>
 									<div class="logos">
-										<img src="../data/logos/idl.png" class="lg" id="">
+										<img src="./data/logos/idl.png" class="lg" id="">
 									</div>
 									<div class="logos">
-										<img src="../data/logos/velve.svg" class="lg" id="">
+										<img src="./data/logos/velve.svg" class="lg" id="">
 									</div>
 									<div class="logos">
-										<img src="../data/logos/csdd.svg" class="lg" id="">
+										<img src="./data/logos/csdd.svg" class="lg" id="">
 									</div>
 									<div class="logos" id="1logo">
-										<img src="../data/logos/stb.png" class="lg" id="">
+										<img src="./data/logos/stb.png" class="lg" id="">
 									</div>
 									<div class="logos">
-										<img src="../data/logos/logo.png" class="lg" id="">
+										<img src="./data/logos/logo.png" class="lg" id="">
 									</div>
 									<div class="logos">
-										<img src="../data/logos/car.png" class="lg" id="">
+										<img src="./data/logos/car.png" class="lg" id="">
 									</div>
 								</div>
 							</div>
@@ -107,33 +111,15 @@
 					</div>
 					<div id="gallery">
 						<h1 id="galleryTitle"><?= $navigation[2]['title' . $lan] ?></h1>
-						<div id="photDisp">
-							<?php
-							echo '<img id="photo" src="' . $gallery['image'][0]['path'] . '" >';
-							?>
-
-						</div>
-						<div id="photMenu">
+						<div id="galleryMenu">
 							<?php
 							foreach ($gallery['image'] as $value) {
-								echo '<div class="phMenu">
+								echo '
 										<div class="ph">
 											<img class="phImg" src="' . $value['path'] . '"> 
 								    	</div>
-									</div>';
+									';
 							}
-							/*rewinddir($dir);
-							while (false !== ($entry = readdir($dir))) {
-								if ($entry != ".." && $entry != ".") {
-									if (preg_match($isInv, $entry) != 1) {
-										echo '<div class="phMenu">
-												  <div class="ph">
-													  <img class="phImg" src="../data/metal_products//' . $entry . '"> 
-												  </div>
-											  </div>';
-									}
-								}
-							}*/
 							?>
 						</div>
 					</div>
@@ -188,9 +174,6 @@
 						ntgrup.lv © Copyright NTGrup <?php echo date("Y") ?>
 					</footer>
 				</div>
-			</div>
-			</div>
-			</div>
 			</div>
 		</body>
 
