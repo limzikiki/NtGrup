@@ -43,14 +43,7 @@ $(function () {
 	var HH = $("section").height + 10;
 	$("#aboutus").css("margin-top", HH);
 	$(document).ready(function () {
-		$("#galleryMenu").slick({
-			centerMode: true,
-			variableWidth: true,
-			focusOnSelect: true,
-			autoplay: true,
-			dots: true,
-			autoplaySpeed: 2000,
-		});
+		
 	});
 	sizes();
 	$(window).resize(function () {

@@ -20,7 +20,6 @@ $(function(){
         if (orientation === 1) {
             alert("lol");
         } else {
-            alert("edjflk")
             $("#aboutContent").css({ "flex-direction": "row" });
             $("#textAbout").css({ "max-height": "70vh" });
         }
@@ -39,19 +38,7 @@ $(function(){
 		vh = $(window).height()/100;
 	}
 	setCssV();
-	$("#burger").css({"left":($(window).width()-$("#burger").width())+"px"});
-	$("#burger").css({"left":0});
-	$("#burger").on("click",function(){
-		$(".line").toggleClass("active");
-		if($(".line").hasClass("active")){
-			$("#burger").css({"left":($(window).width()-$("#burger").width())+"px"});
-			$("#toolbar").css({"left":0});
-		}else{
-			$("#burger").css({"left":0});
-			$("#toolbar").css({"left":"-100vw"});
-		}
-	});
-	$(".frameProd").children("div").fadeOut(1);
+	/*$(".frameProd").children("div").fadeOut(1);
 	$(".frameProd").on("click",function(){
 		//$(".frameProd").toggleClass("showed");
 		if($(this).width() >= (80*vw)||$(this).width() === (80*vw)){
@@ -65,7 +52,7 @@ $(function(){
 			$(".frameProd").children("div");
 			$(this).children("div").slideToggle(1000);
 		}
-    });
+    });*/
 
 	var vOpacityScroll = 10/($(window).height());
 	$("#galleryInterface").scroll(function(){	

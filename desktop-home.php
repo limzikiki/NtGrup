@@ -1,14 +1,13 @@
 		<script src='./js.js'></script>
+		<script src="./splide-init.js"></script>
 		<link rel='stylesheet' type='text/css' href='./style.css'>
 		<title>NT Grup - Metālkonstrukcijas</title>
 		<meta name="theme-color" contents="#9CC2CE">
 		<link rel="alternate" hreflang="ru" href="ru/" />
 		<link rel="alternate" hreflang="en" href="en" />
 		<link rel="alternate" hreflang="lv" href="lv" />
-		<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-		<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
-		<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+		<link rel="stylesheet" href="./splide-styles.css">
 		</head>
 
 		<body>
@@ -111,16 +110,20 @@
 					</div>
 					<div id="gallery">
 						<h1 id="galleryTitle"><?= $navigation[2]['title' . $lan] ?></h1>
-						<div id="galleryMenu">
-							<?php
-							foreach ($gallery['image'] as $value) {
-								echo '
-										<div class="ph">
-											<img class="phImg" src="' . $value['path'] . '"> 
+						<div class="splide">
+							<div id="galleryMenu" class="splide__track">
+								<div class="splide__list">
+									<?php
+									foreach ($gallery['image'] as $value) {
+										echo '
+										<div class="ph splide__slide">
+											<img class="phImg" src=".' . $value['path'] . '"> 
 								    	</div>
 									';
-							}
-							?>
+									}
+									?>
+								</div>
+							</div>
 						</div>
 					</div>
 					<div id="message_block">
@@ -175,6 +178,7 @@
 					</footer>
 				</div>
 			</div>
+			<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
 		</body>
 
 		</HTML>

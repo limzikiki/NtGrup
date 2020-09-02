@@ -12,6 +12,7 @@ body {
 	padding: 0;
 	font-family: "Roboto";
 	font-weight: 400;
+	font-size: 1.5em;
 	background-color: var(--bg-color);
 	-webkit-box-align: center;
 	-ms-flex-align: center;
@@ -102,7 +103,6 @@ a {
 
 .mainlevel {
 	color: rgba(81, 81, 81, 0.7);
-	font-size: 2em;
 	font-weight: 400;
 }
 
@@ -112,7 +112,6 @@ a {
 
 .lang {
 	color: rgba(81, 81, 81, 0.7);
-	font-size: 2em;
 	padding-right: 3%;
 	border: 0 solid;
 	display: inline;
@@ -141,7 +140,6 @@ a {
 	color: var(--attention);
 	border-radius: 30em;
 	text-transform: uppercase;
-	font-size: 0.6em;
 	transition: background ease-in-out 0.3s;
 }
 #lmr:hover {
@@ -154,7 +152,8 @@ a {
 	z-index: 10;
 	position: absolute;
 	width: 100%;
-	float: center;
+	display: flex;
+	flex-direction: column;
 	-webkit-box-align: center;
 	-ms-flex-align: center;
 	align-items: center;
@@ -174,7 +173,6 @@ a {
 	display: -ms-flexbox;
 	display: flex;
 	max-width: 750px;
-	font-size: 1.7em;
 	-ms-flex-wrap: nowrap;
 	flex-wrap: nowrap;
 	-webkit-box-pack: justify;
@@ -188,7 +186,6 @@ a {
 
 h1 {
 	color: var(--attention);
-	font-size: 2em;
 	font-weight: 700;
 	margin: 0;
 	margin-bottom: 0.3em;
@@ -197,7 +194,6 @@ h1 {
 
 h2 {
 	color: var(--secondary_collor) !important;
-	font-size: 1.2em;
 	margin: 0;
 	margin-bottom: 0.2em;
 	padding: 0;
@@ -217,7 +213,6 @@ p {
 }
 
 .prodText {
-	font-size: 1.7em;
 	max-width: 750px;
 	padding: 1em;
 	display: block;
@@ -235,11 +230,6 @@ p {
 
 .text {
 	white-space: nowrap;
-	font-size: 1em;
-}
-
-.measurement {
-	font-size: 2em;
 }
 
 .atention {
@@ -263,7 +253,6 @@ p {
 	background: var(--attention);
 	border: 0;
 	height: 5vh;
-	font-size: 0.8em;
 	padding: 0 1em;
 	color: var(--bg-color);
 	margin: auto;
@@ -294,9 +283,6 @@ p {
 	-webkit-box-align: center;
 	-ms-flex-align: center;
 	align-items: center;
-}
-.phImg {
-	max-height: 40vh;
 }
 
 #message_block {
@@ -344,7 +330,6 @@ p {
 }
 
 .blockTitle {
-	font-size: 3em;
 	font-weight: 700;
 	color: var(--attention);
 }
@@ -381,12 +366,10 @@ p {
 }
 
 .cont {
-	font-size: 1.5em;
 	display: block;
 }
 
 .bold {
-	font-size: 1.5em;
 	font-weight: 700;
 }
 
@@ -396,11 +379,6 @@ p {
 
 #price {
 	font-weight: 400;
-	font-size: 1.2em;
-}
-
-#smaller_number_of_price {
-	font-size: 0.8em;
 }
 
 table {
@@ -424,11 +402,9 @@ td:first-of-type {
 	text-align: left;
 }
 #email {
-	font-size: 1.5em;
 }
 #email_about {
 	font-weight: 400;
-	font-size: 1.5em;
 }
 
 #contactsTitle {
