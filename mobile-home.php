@@ -1,4 +1,4 @@
-<title>NT Grup - Metala</title>
+<title>NT Grup - Metālkonstrukcijas</title>
 <meta http-equiv="Cache-Control" content="no-cache">
 <!-- перед выклаыванием стоит удаление строку с верху чтобы страница кешировалась-->
 <meta name="viewport" content="width=device-width, initial-scale=1, height=device-height">
@@ -6,8 +6,8 @@
 <link rel="alternate" hreflang="en" href="en" />
 <link rel="alternate" hreflang="lv" href="lv" />
 <link rel="stylesheet" href="normalize.css">
-<script src='./mob-js.js'></script>
-<link rel='stylesheet' type='text/css' href='./mob-style.css'>
+<script src='/mob-js.js'></script>
+<link rel='stylesheet' type='text/css' href='/mob-style.css'>
 </head>
 
 <body>
@@ -16,13 +16,13 @@
             <div id="top-bar">
                 <div id="langs">
                     <div id="langform">
-                        <a href='./lv' class="lang" id="lat">LAT</a>
+                        <a href='/lv/' class="lang" id="lat">LAT</a>
                     </div> |
                     <div id="langform">
-                        <a href='./ru' class="lang" id="rus">RUS</a>
+                        <a href='/ru/' class="lang" id="rus">RUS</a>
                     </div> |
                     <div id="langform">
-                        <a href='./en' class="lang" id="eng">ENG</a>
+                        <a href='/en/' class="lang" id="eng">ENG</a>
                     </div>
                 </div>
             </div>
@@ -35,7 +35,7 @@
             </div>
         </div>
         <div id="background">
-            <img src="<?php echo './cockpit/storage/uploads' . $background['image']['path']; ?>" id="img">
+            <img src="<?php echo '/cockpit/storage/uploads' . $background['image']['path']; ?>" id="img">
         </div>
         <div id="about">
             <div id="aboutContent" class="content">
@@ -52,32 +52,32 @@
         </script>
         <div id="companies">
             <div class="logos">
-                <img src="./data/mblogo/idl.png" class="lg" id="">
+                <img src="/data/mblogo/idl.png" class="lg" id="">
             </div>
             <div class="logos">
-                <img src="./data/mblogo/velve.png" class="lg" id="">
+                <img src="/data/mblogo/velve.png" class="lg" id="">
             </div>
             <div class="logos">
-                <img src="./data/mblogo/lnk.png" class="lg" id="">
+                <img src="/data/mblogo/lnk.png" class="lg" id="">
             </div>
             <div class="logos">
-                <img src="./data/mblogo/laima.png" class="lg" id="">
+                <img src="/data/mblogo/laima.png" class="lg" id="">
             </div>
             <div class="logos">
-                <img src="./data/mblogo/logo.png" class="lg" id="">
+                <img src="/data/mblogo/logo.png" class="lg" id="">
             </div>
             <div class="logos">
-                <img src="./data/mblogo/car.png" class="lg" id="">
+                <img src="/data/mblogo/car.png" class="lg" id="">
             </div>
             <div class="logos">
-                <img src="./data/mblogo/gut.png" class="lg" id="">
+                <img src="/data/mblogo/gut.png" class="lg" id="">
             </div>
         </div>
         <div id="products">
             <div id="prodContent" class="content">
                 <div class="prod">
                     <div class="frameProd">
-                        <img src="./data/hangar.jpg" class="prodImg">
+                        <img src="/data/hangar.jpg" class="prodImg">
                         <div class="prodText">
                             <?= $products[0]["content$lan"] ?>
                         </div>
@@ -85,7 +85,7 @@
                 </div>
                 <div class="prod">
                     <div class="frameProd">
-                        <img src="./data/welding.jpg" class="prodImg">
+                        <img src="/data/welding.jpg" class="prodImg">
                         <div class="prodText">
                             <?= $products[1]["content$lan"] ?>
                         </div>

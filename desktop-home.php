@@ -1,20 +1,20 @@
-		<script src='./js.js'></script>
-		<script src="./splide-init.js"></script>
-		<link rel='stylesheet' type='text/css' href='./style.css'>
+		<script src='/js.js'></script>
+		<script src="/splide-init.js"></script>
+		<link rel='stylesheet' type='text/css' href='/style.css'>
 		<title>NT Grup - Metālkonstrukcijas</title>
 		<meta name="theme-color" contents="#9CC2CE">
 		<link rel="alternate" hreflang="ru" href="ru/" />
-		<link rel="alternate" hreflang="en" href="en" />
-		<link rel="alternate" hreflang="lv" href="lv" />
+		<link rel="alternate" hreflang="en" href="en/" />
+		<link rel="alternate" hreflang="lv" href="lv/" />
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
-		<link rel="stylesheet" href="./splide-styles.css">
+		<link rel="stylesheet" href="/splide-styles.css">
 		</head>
 
 		<body>
 			<section id="menu">
 				<div id='menu-wrap'>
 					<li class="menuval logo">
-						<img src="./data/logs.png " id="logo">
+						<img src="/data/logs.png " id="logo">
 					</li>
 					<li class="menuval">
 						<a class="mainlevel js-navLink" href="#aboutus"><?= $navigation[0]['title' . $lan] ?></a>
@@ -30,18 +30,18 @@
 					</li>
 					<li class="menuval languages">
 						<div class="langbox">
-							<a href='./lv' class="lang" id="lat">LAT</a>
+							<a href='/lv/' class="lang" id="lat">LAT</a>
 						</div>
 						<div class="langbox">
-							<a href='./ru' class="lang" id="rus">RUS</a>
+							<a href='/ru/' class="lang" id="rus">RUS</a>
 						</div>
 						<div class="langbox">
-							<a href='./en' class="lang" id="eng">ENG</a>
+							<a href='/en/' class="lang" id="eng">ENG</a>
 						</div>
 					</li>
 				</div>
 			</section>
-			<img src="<?php echo './cockpit/storage/uploads' . $background['image']['path']; ?>" id="img">
+			<img src="<?php echo '/cockpit/storage/uploads' . $background['image']['path']; ?>" id="img">
 			<div class="premain">
 				<div class="main">
 					<div id="aboutus" align="justify">
@@ -63,31 +63,31 @@
 							<div class="companies">
 								<div id="logocontainer">
 									<div class="logos">
-										<img src="./data/logos/laima.png" class="lg" id="">
+										<img src="/data/logos/laima.png" class="lg" id="">
 									</div>
 									<div class="logos" id="">
-										<img src="./data/logos/gut.png" class="lg" id="">
+										<img src="/data/logos/gut.png" class="lg" id="">
 									</div>
 									<div class="logos">
-										<img src="./data/logos/lnk.png" class="lg" id="">
+										<img src="/data/logos/lnk.png" class="lg" id="">
 									</div>
 									<div class="logos">
-										<img src="./data/logos/idl.png" class="lg" id="">
+										<img src="/data/logos/idl.png" class="lg" id="">
 									</div>
 									<div class="logos">
-										<img src="./data/logos/velve.svg" class="lg" id="">
+										<img src="/data/logos/velve.svg" class="lg" id="">
 									</div>
 									<div class="logos">
-										<img src="./data/logos/csdd.svg" class="lg" id="">
+										<img src="/data/logos/csdd.svg" class="lg" id="">
 									</div>
 									<div class="logos" id="1logo">
-										<img src="./data/logos/stb.png" class="lg" id="">
+										<img src="/data/logos/stb.png" class="lg" id="">
 									</div>
 									<div class="logos">
-										<img src="./data/logos/logo.png" class="lg" id="">
+										<img src="/data/logos/logo.png" class="lg" id="">
 									</div>
 									<div class="logos">
-										<img src="./data/logos/car.png" class="lg" id="">
+										<img src="/data/logos/car.png" class="lg" id="">
 									</div>
 								</div>
 							</div>
@@ -117,7 +117,7 @@
 									foreach ($gallery['image'] as $value) {
 										echo '
 										<div class="ph splide__slide">
-											<img class="phImg" src=".' . $value['path'] . '"> 
+											<img class="phImg" src="' . $value['path'] . '"> 
 								    	</div>
 									';
 									}

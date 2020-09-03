@@ -2,7 +2,7 @@
 require __DIR__ . '/header.php';
 require './cockpit/bootstrap.php';
 switch ($lan) {
-    case 'lv':
+    case 'en':
         $lan = "";
         break;
     case 'ru':
