@@ -7,6 +7,25 @@
   array (
     0 => 
     array (
+      'name' => 'title',
+      'label' => '',
+      'type' => 'text',
+      'default' => '',
+      'info' => '',
+      'group' => '',
+      'localize' => true,
+      'options' => 
+      array (
+      ),
+      'width' => '1-1',
+      'lst' => true,
+      'acl' => 
+      array (
+      ),
+      'required' => true,
+    ),
+    1 => 
+    array (
       'name' => 'content',
       'label' => '',
       'type' => 'wysiwyg',
@@ -28,7 +47,7 @@
   'sortable' => true,
   'in_menu' => false,
   '_created' => 1593637857,
-  '_modified' => 1598444417,
+  '_modified' => 1599160458,
   'color' => '#5D9CEC',
   'acl' => 
   array (

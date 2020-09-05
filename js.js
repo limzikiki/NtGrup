@@ -12,6 +12,8 @@ $(function () {
 			window.FadeOfMenu = BrowserHeight;
 		}
 
+		$("#products-wrap").height(ImgHeight * 1);
+
 		BrowserWidth = $(window).width();
 
 		$("#precomp").width(BrowserWidth);
@@ -26,7 +28,7 @@ $(function () {
 	var s = 0;
 
 	setInterval(function () {
-		if (s === 1) {
+		if (s == 1) {
 			p--;
 			if ((f / 2) * -1 > p) {
 				s = 0;
@@ -42,45 +44,13 @@ $(function () {
 
 	var HH = $("section").height + 10;
 	$("#aboutus").css("margin-top", HH);
-	$(document).ready(function () {
-		
-	});
+	$(document).ready(function () {});
 	sizes();
 	$(window).resize(function () {
 		sizes();
 	});
 	var url;
 	var picDonwloadTime = 500;
-	/*$(".phImg").click(function () {
-		if (url !== $(this).attr("src")) {
-			url = $(this).attr("src");
-			$("#photo").animate(
-				{
-					left: "+=" + BrowserWidth,
-				},
-				picDonwloadTime
-			);
-			console.log("done");
-			setTimeout(function () {
-				document.getElementById("photDisp").innerHTML =
-					"<img id='photo' src='" + url + "' >";
-				$("#photo").animate(
-					{
-						left: "+=" + BrowserWidth,
-					},
-					1
-				);
-				$("#photo").animate(
-					{
-						left: "-=" + BrowserWidth,
-					},
-					picDonwloadTime
-				);
-			}, picDonwloadTime);
-		} else {
-			console.log("crash");
-		}
-	});*/
 	if ($(window).scrollTop() > FadeOfMenu) {
 		$("#menu").addClass("opmenu");
 	} else {

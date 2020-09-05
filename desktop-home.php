@@ -41,7 +41,17 @@
 					</li>
 				</div>
 			</section>
-			<img src="<?php echo '/cockpit/storage/uploads' . $background['image']['path']; ?>" id="img">
+			<div>
+				<div id='products-wrap'>
+					<?php
+					foreach ($products as $key => $product) {
+						echo "<a href='#prod".$key."' class='js-navLink prodLinks'>".$product["title$lan"]."</a>";
+					}
+					?>
+				</div>
+				<img src="<?php echo '/cockpit/storage/uploads' . $background['image']['path']; ?>" id="img">
+			</div>
+			
 			<div class="premain">
 				<div class="main">
 					<div id="aboutus" align="justify">
@@ -96,9 +106,12 @@
 					<div id="products">
 						<div id="prodText">
 							<?php
-							foreach ($products as $product) {
+							foreach ($products as $key => $product) {
 							?>
-								<div class="prodText">
+								<div class="prodText" id="prod<?=$key?>">
+									<h1><?php
+										echo $product["title$lan"]
+									?></h1>
 									<?php
 									echo $product["content$lan"];
 									?>
