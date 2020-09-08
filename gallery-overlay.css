@@ -1,0 +1,20 @@
+#mini-gallery-banner {
+	width: 100%;
+	border: 1px solid red;
+	position: absolute;
+	z-index: 10;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+}
+.mini-gallery-image {
+	height: 50px;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+	transition: opacity 0.5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active до версии 2.1.8 */ {
+	opacity: 0;
+}

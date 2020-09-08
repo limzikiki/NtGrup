@@ -1,8 +1,9 @@
+"use strict";
 $(function () {
 	window.t = $(".tiltle");
 	var ImgHeight = $("#img").height();
 	function sizes() {
-		BrowserHeight = $(window).height();
+		let BrowserHeight = $(window).height();
 		ImgHeight = $("#img").height();
 		if (BrowserHeight > ImgHeight) {
 			$(".main").css("top", ImgHeight);
@@ -12,9 +13,12 @@ $(function () {
 			window.FadeOfMenu = BrowserHeight;
 		}
 
-		$("#products-wrap").height(ImgHeight * 1);
+		//set galleries wrap height
+		$("#mini-gallery-banner").height(ImgHeight * 0.5);
 
-		BrowserWidth = $(window).width();
+		$("#products-wrap").height(ImgHeight);
+
+		let BrowserWidth = $(window).width();
 
 		$("#precomp").width(BrowserWidth);
 
@@ -23,6 +27,7 @@ $(function () {
 		$("#logocontainer").css("transform", "translate(" + 0 + "px)");
 	}
 
+	//position
 	var p = 0;
 	const f = $(".companies").width() * 0.55; //длина прокрутки больше число тем больше выйдет
 	var s = 0;
@@ -44,13 +49,10 @@ $(function () {
 
 	var HH = $("section").height + 10;
 	$("#aboutus").css("margin-top", HH);
-	$(document).ready(function () {});
 	sizes();
 	$(window).resize(function () {
 		sizes();
 	});
-	var url;
-	var picDonwloadTime = 500;
 	if ($(window).scrollTop() > FadeOfMenu) {
 		$("#menu").addClass("opmenu");
 	} else {

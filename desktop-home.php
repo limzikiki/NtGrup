@@ -1,13 +1,13 @@
 		<script src='/js.js'></script>
-		<script src="/splide-init.js"></script>
-		<link rel='stylesheet' type='text/css' href='/style.css'>
 		<title>NT Grup - Metālkonstrukcijas</title>
 		<meta name="theme-color" contents="#9CC2CE">
+		<link rel='stylesheet' type='text/css' href='/style.css'>
 		<link rel="alternate" hreflang="ru" href="ru/" />
 		<link rel="alternate" hreflang="en" href="en/" />
 		<link rel="alternate" hreflang="lv" href="lv/" />
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
 		<link rel="stylesheet" href="/splide-styles.css">
+		<link rel="stylesheet" href="/gallery-overlay.css">
 		</head>
 
 		<body>
@@ -42,6 +42,12 @@
 				</div>
 			</section>
 			<div>
+				<div id="mini-gallery-banner">
+					{{test}}
+					<div class="mini-gallery" v-for="gallery in galleries.entries" :key="gallery._id">
+						<gallery-item v-for="item in gallery.gallery" v-bind:img="item"/>
+					</div>
+				</div>
 				<div id='products-wrap'>
 					<?php
 					foreach ($products as $key => $product) {
@@ -192,6 +198,9 @@
 				</div>
 			</div>
 			<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+			<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+			<script src="/gallery-overlay.js"></script>
+			<script src="/splide-init.js"></script>
 		</body>
 
 		</HTML>
