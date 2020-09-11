@@ -1,0 +1,29 @@
+body {
+  font-family: Helvetica, Roboto, sans-serif;
+  background: #fefefe;
+}
+
+a {
+  color: #B21580;
+  text-decoration: none;
+}
+
+#header {
+  display: flex;
+  width: 100vw;
+  height: 100px;
+  flex-direction: column;
+  overflow-x: hidden;
+  align-items: center;
+  align-items: stretch;
+}
+#header header {
+  min-width: 100%;
+  max-width: 1200px;
+  margin: 1em 0;
+  background: red;
+  color: #B21580;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

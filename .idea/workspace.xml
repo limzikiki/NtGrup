@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5c32fc77-ab20-4b7b-876b-366b3b4ce5a9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/desktop-home.php" beforeDir="false" afterPath="$PROJECT_DIR$/desktop-home.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js.js" beforeDir="false" afterPath="$PROJECT_DIR$/js.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/serv.code-workspace" beforeDir="false" afterPath="$PROJECT_DIR$/serv.code-workspace" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
-    </list>
+    <list default="true" id="5c32fc77-ab20-4b7b-876b-366b3b4ce5a9" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,7 +41,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../bin/PHP/php.exe" />
+    <property name="last_opened_file_path" value="D:/prog/javascript/react-youtube" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -67,6 +62,7 @@
       <workItem from="1599344540061" duration="293000" />
       <workItem from="1599345186943" duration="271000" />
       <workItem from="1599345469509" duration="886000" />
+      <workItem from="1599657330246" duration="27000" />
     </task>
     <servers />
   </component>
@@ -90,10 +86,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="828" y="194" width="1092" height="715" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1920.0.1536.864/0.0.1920.1080@0.0.1920.1080" timestamp="1599346358620" />
-    <state x="1201" y="298" key="FileChooserDialogImpl" timestamp="1599345958077">
+    <state x="1201" y="298" key="FileChooserDialogImpl" timestamp="1599657357278">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="1201" y="298" key="FileChooserDialogImpl/-1920.0.1536.864/0.0.1920.1080@0.0.1920.1080" timestamp="1599345958077" />
+    <state x="1201" y="298" key="FileChooserDialogImpl/-1920.0.1536.864/0.0.1920.1080@0.0.1920.1080" timestamp="1599657357278" />
     <state width="914" height="363" key="GridCell.Tab.0.bottom" timestamp="1599346361108">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

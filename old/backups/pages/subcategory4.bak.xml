@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<item><pubDate>Sat, 17 Dec 2011 12:38:55 -0500</pubDate><title><![CDATA[Subcategory4]]></title><url><![CDATA[subcategory4]]></url><meta><![CDATA[]]></meta><metad><![CDATA[]]></metad><menu><![CDATA[Subcat4]]></menu><menuStatus><![CDATA[Y]]></menuStatus><template><![CDATA[template.php]]></template><parent><![CDATA[gallery]]></parent><content><![CDATA[&lt;p&gt;
-	(% gallery name=Subcat4 %)&lt;/p&gt;
-]]></content><private><![CDATA[]]></private><menuOrder><![CDATA[3]]></menuOrder></item>

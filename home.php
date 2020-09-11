@@ -26,7 +26,8 @@ usort($products, function ($i1, $i2) {
 });
 
 if (preg_match("/(android|avantgo|blackberry|bolt|boost|cricket|docomo|fone|hiptop|mini|mobi|palm|phone|pie|tablet|up\.browser|up\.link|webos|wos)/i", $_SERVER["HTTP_USER_AGENT"]) != $mobile || $_GET["m"]) {
-    require 'mobile-home.php';
+    //require 'mobile-home.php';
+    require 'desktop-home.php';
 } else {
     require 'desktop-home.php';
 }

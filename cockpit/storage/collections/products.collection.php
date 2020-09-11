@@ -43,11 +43,29 @@
       ),
       'required' => true,
     ),
+    2 => 
+    array (
+      'name' => 'gallery',
+      'label' => 'Галлерея',
+      'type' => 'gallery',
+      'default' => '',
+      'info' => '',
+      'group' => '',
+      'localize' => false,
+      'options' => 
+      array (
+      ),
+      'width' => '1-1',
+      'lst' => true,
+      'acl' => 
+      array (
+      ),
+    ),
   ),
   'sortable' => true,
   'in_menu' => false,
   '_created' => 1593637857,
-  '_modified' => 1599160458,
+  '_modified' => 1599845736,
   'color' => '#5D9CEC',
   'acl' => 
   array (
