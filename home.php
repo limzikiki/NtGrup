@@ -16,14 +16,14 @@ switch ($lan) {
 $background = cockpit('singletons')->getData('background');
 $navigation = cockpit('collections')->find('navigation');
 $content = cockpit('collections')->find('content');
-$products = cockpit('collections')->find('products');
+//$products = cockpit('collections')->find('products');
 $contacts = cockpit('collections')->find('contacts');
 $form_translation = cockpit('collections')->find('leave_message');
 $gallery = cockpit('singletons')->getData('gallery');
 
-usort($products, function ($i1, $i2) {
+/*usort($products, function ($i1, $i2) {
     return $i1['_o'] <=> $i2["_o"];
-});
+});*/
 
 if (preg_match("/(android|avantgo|blackberry|bolt|boost|cricket|docomo|fone|hiptop|mini|mobi|palm|phone|pie|tablet|up\.browser|up\.link|webos|wos)/i", $_SERVER["HTTP_USER_AGENT"]) != $mobile || $_GET["m"]) {
     //require 'mobile-home.php';

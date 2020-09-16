@@ -1,17 +1,18 @@
-		<script src='/js.js'></script>
+		<script src='/js/js.js'></script>
 		<title>NT Grup - Metālkonstrukcijas</title>
 		<meta name="theme-color" contents="#9CC2CE">
-		<link rel='stylesheet' type='text/css' href='/style.css'>
+		<link rel='stylesheet' type='text/css' href='/styles/style.css'>
 		<link rel="alternate" hreflang="ru" href="ru/" />
 		<link rel="alternate" hreflang="en" href="en/" />
 		<link rel="alternate" hreflang="lv" href="lv/" />
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
-		<link rel="stylesheet" href="/splide-styles.css">
-		<link rel="stylesheet" href="/gallery-overlay.css">
+		<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+		<link rel="stylesheet" href="/styles/splide-styles.css">
+		<link rel="stylesheet" href="/styles/gallery-overlay.css">
 		</head>
 
 		<body>
-			<section id="menu">
+			<header id="menu">
 				<div id='menu-wrap'>
 					<li class="menuval logo">
 						<img src="/data/logs.png " id="logo">
@@ -40,25 +41,19 @@
 						</div>
 					</li>
 				</div>
-			</section>
-			<div>
-				<div id="mini-gallery-banner">
-					{{test}}
-					<div class="mini-gallery" v-for="gallery in galleries.entries" :key="gallery._id">
-						<gallery-item v-for="item in gallery.gallery" v-bind:img="item"/>
+			</header>
+			<div id="premain">
+				<div>
+					<div id="mini-gallery-banner">
+						<!--<div class="mini-gallery" v-for="gallery in galleries.entries" :key="gallery._id">
+							<gallery-item v-for="item in gallery.gallery" v-bind:img="item"/>
+						</div>-->
 					</div>
+					<div id='products-wrap'>
+						<a v-for="(post, key) in posts.entries" v-bind:href="'#prod' + key" class='js-navLink prodLinks'>{{post.title}}</a>
+					</div>
+					<img src="<?php echo '/cockpit/storage/uploads' . $background['image']['path']; ?>" id="img">
 				</div>
-				<div id='products-wrap'>
-					<?php
-					foreach ($products as $key => $product) {
-						echo "<a href='#prod".$key."' class='js-navLink prodLinks'>".$product["title$lan"]."</a>";
-					}
-					?>
-				</div>
-				<img src="<?php echo '/cockpit/storage/uploads' . $background['image']['path']; ?>" id="img">
-			</div>
-			
-			<div class="premain">
 				<div class="main">
 					<div id="aboutus" align="justify">
 						<div id="ab">
@@ -68,12 +63,6 @@
 								</h1>
 								<?= $content[0]['text' . $lan] ?>
 							</div>
-							<script>
-								var creationDate = new Date(2007, 5, 21);
-								var date = new Date();
-								var thisYear = Math.floor((date.valueOf() - creationDate.valueOf()) / (86400 * 1000 * 365));
-								$("#years").html(thisYear);
-							</script>
 						</div>
 						<div id="precomp">
 							<div class="companies">
@@ -82,7 +71,7 @@
 										<img src="/data/logos/laima.png" class="lg" id="">
 									</div>
 									<div class="logos" id="">
-										<img src="/data/logos/gut.png" class="lg" id="">
+										<img src="/data/logos/stats.svg" class="lg" id="">
 									</div>
 									<div class="logos">
 										<img src="/data/logos/lnk.png" class="lg" id="">
@@ -94,12 +83,12 @@
 										<img src="/data/logos/velve.svg" class="lg" id="">
 									</div>
 									<div class="logos">
+										<img src="/data/logos/pmg.png" class="lg" id="">
+									</div>
+									<div class="logos">
 										<img src="/data/logos/csdd.svg" class="lg" id="">
 									</div>
 									<div class="logos" id="1logo">
-										<img src="/data/logos/stb.png" class="lg" id="">
-									</div>
-									<div class="logos">
 										<img src="/data/logos/logo.png" class="lg" id="">
 									</div>
 									<div class="logos">
@@ -111,20 +100,19 @@
 					</div>
 					<div id="products">
 						<div id="prodText">
-							<?php
-							foreach ($products as $key => $product) {
-							?>
-								<div class="prodText" id="prod<?=$key?>">
-									<h1><?php
-										echo $product["title$lan"]
-									?></h1>
-									<?php
-									echo $product["content$lan"];
-									?>
+							<div v-for="(product, key) in posts.entries" class="prodText" v-bind:id="'prod'+key">
+								<h1>
+									{{product.title}}
+								</h1>
+								<span v-html="product.content"></span>
+								<div v-if="(product.gallery != undefined) && (product.gallery.length > 0) " v-bind:class="['Prod__gallery', 'swiper'+key]">
+									<div class="swiper-wrapper">
+										<div v-for="photo in product.gallery" class="swiper-slide Prod__gallery_container">
+											<img v-bind:src="'https://ntgrup.lv'+photo.path" class="Prod__gallery_item "/>
+										</div>
+									</div>
 								</div>
-							<?php
-							}
-							?>
+							</div>
 						</div>
 					</div>
 					<div id="gallery">
@@ -198,9 +186,18 @@
 				</div>
 			</div>
 			<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
-			<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-			<script src="/gallery-overlay.js"></script>
-			<script src="/splide-init.js"></script>
+			<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+			<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+			<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+			<script src="/js/gallery-overlay.js"></script>
+			<script src="/js/products-loader.js"></script>
+			<script src="/js/splide-init.js"></script>
+			<script>
+								var creationDate = new Date(2007, 5, 21);
+								var date = new Date();
+								var thisYear = Math.floor((date.valueOf() - creationDate.valueOf()) / (86400 * 1000 * 365));
+								$("#years").html(thisYear);
+							</script>
 		</body>
 
 		</HTML>

@@ -8,9 +8,9 @@ $router->map('GET', '/', function () {
 $router->map('GET', '/[a:lan]/', function ($lan) {
     require 'home.php';
 });
-/*$router->map('GET', '/[a:lan]', function($lan){
+$router->map('GET', '/[a:lan]', function($lan){
     require 'home.php';
-});*/
+});
 $match = $router->match();
 if (is_array($match) && is_callable($match['target'])) {
     call_user_func_array($match['target'], $match['params']);

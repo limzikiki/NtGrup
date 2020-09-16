@@ -1,35 +1,523 @@
 $white: #fefefe;
 $black: #111;
-$main: #B21580;
+$main: #d11782;
+$darker-main:#96126C;
 $gray: #888;
-$font-stack: Helvetica, Roboto, sans-serif;
+$light-gray: #ccc;
+$font-stack: Montserrat,
+Helvetica,
+Roboto,
+sans-serif;
 
-body{
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 599px;
+
+// Small tablets (portrait view)
+$screen-md-min: 600px;
+
+// Tablets and small desktops
+$screen-lg-min: 900px;
+
+// Large tablets and desktops
+$screen-xl-min: 1200px;
+
+
+// Small devices  
+@mixin sm {
+    @media (max-width: #{$screen-sm-min}) {
+        @content;
+    }
+}
+
+// Medium devices
+@mixin md {
+    @media (min-width: #{$screen-md-min}) {
+        @content;
+    }
+}
+
+// Large devices
+@mixin lg {
+    @media (min-width: #{$screen-lg-min}) {
+        @content;
+    }
+}
+
+// Extra large devices
+@mixin xl {
+    @media (min-width: #{$screen-xl-min}) {
+        @content;
+    }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap');
+
+body {
     font-family: $font-stack;
     background: $white;
+    color: $black;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+html {
+    width: 100%
+}
+
+a {
+    color: $main;
+    text-decoration: none;
+    flex-wrap: wrap;
+}
+
+#header-wrap {
+    position: relative;
+    display: grid;
+    transition: left 1s;
+    left: 0;
+
+    @include sm {
+        position: fixed;
+        top: 0;
+        z-index: 1;
+        left: -100vw;
+        background-color: $white;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        padding-top: 5em;
+
+        #logo {
+            display: none;
+        }
+
+        &.shown-menu {
+            left: 0;
+            height: 100vh;
+        }
+
+        main {
+            display: block;
+
+            div {
+                div {
+                    display: flex;
+                    flex-direction: column-reverse;
+                    align-items: flex-start;
+
+                    .btn {
+                        margin-bottom: 1em;
+
+                        &.attention {
+                            background-color: $white;
+                            color: $main
+                        }
+                    }
+                }
+            }
+        }
+
+        header {
+            .svg-inline--fa {
+                font-size: 1.2em;
+            }
+        }
+    }
+
+    @include md {
+        header {
+            width: 100vw;
+            color: $main;
+            max-width: 1168px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: auto;
+            padding-right: 30px;
+            @include xl{
+                padding-right: 1em;
+            }
+        }
+
+        main {
+            display: grid;
+            width: 100%;
+
+            div {
+                justify-self: center;
+                max-width: 1168px;
+                width: 100vw;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                margin: 0.3rem 1rem;
+            }
+        }
+
+        main:before {
+            content: "";
+            height: 1px;
+            width: 100vw;
+            display: block;
+            background-color: $light-gray;
+        }
+    }
+}
+
+#header {
+    display: grid;
+    width: 100vw;
+    overflow-x: hidden;
+    border-bottom: 1px solid $light-gray;
+
+    @include sm {
+        border-bottom: none;
+    }
+
+    #mob-nav {
+        display: none;
+
+        @include sm {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        position: fixed;
+        top: 0;
+        z-index: 2;
+        background-color: $white;
+        width: 100%;
+
+        svg {
+            width: 50vw;
+            max-width: 16em;
+            display: block;
+            z-index: 1;
+            margin-right: 8px;
+        }
+
+        div {
+            height: 100%;
+            position: relative;
+            transform: translate(0, 10%);
+
+            input {
+                height: 3em;
+                width: 3em;
+                position: absolute;
+                top: 5px;
+                left: 10px;
+                z-index: 2;
+                opacity: 0;
+
+                &:checked~span {
+                    background-color: $black;
+
+                    &:nth-of-type(1) {
+                        transform: rotate(45deg);
+                        top: 12px;
+                    }
+
+                    &:nth-of-type(2) {
+                        transform: scale(0.1, 0.1);
+                        opacity: 0;
+                    }
+
+                    &:nth-of-type(3) {
+                        transform: rotate(-45deg);
+                        top: -8px;
+                    }
+                }
+
+                &~span {
+                    position: relative;
+                    transition: top 0.5s, opacity 0.5s, background-color 0.5s, transform 0.5s;
+                    top: 5px;
+                    left: 10px;
+                    height: 5px;
+                    width: 40px;
+                    margin-top: 5px;
+                    z-index: 1;
+                    background-color: #d11782;
+                    display: block;
+                }
+
+            }
+        }
+
+    }
+}
+
+#lang{
+    cursor: pointer;
+    color: $main;
+    &:hover{
+        color: $gray;
+    }
+}
+
+#dropdwon-select-lang{
+    display: none;
+    *{
+        display: block;
+        padding: .1em 0;
+        &:hover{
+            background-color: $light-gray;
+            color: $black;
+        }
+    }
+    z-index: 100;
+    position: absolute;
+    background-color: $white;
+    border: $gray 1px solid;
+    
+    width: 100px;
+    padding: .3em 0;
+    border-radius: 1px;
 }
 
 a{
-    color: $main;
-    text-decoration: none;
+    &:hover{
+        color: $gray;
+        text-decoration: none;
+    }
 }
 
-#header{
-    display:flex;
-    width: 100vw;
-    height: 100px;
-    flex-direction: column;
-    overflow-x: hidden;
-    align-items: center;
-    align-items: stretch;
-    header{
-        min-width: 100%;
-        max-width: 1200px;
-        margin: 1em 0;
-        background: red;
+#social-icons-block,
+#top-contacts {
+    display: flex;
+}
+
+.social-icons,
+#top-contacts>* {
+    margin: 0.5em;
+    min-height: 1em;
+    min-width: 1em;
+}
+
+#phone {
+    font-weight: bold;
+    color: $black;
+
+    svg {
         color: $main;
+    }
+}
+
+#logo {
+    width: 30vw;
+    display: block;
+}
+
+.btn {
+    color: $black;
+    display: block;
+    justify-self: flex-end;
+    text-transform: uppercase;
+    padding: 1em 1.5em;
+    border-radius: 0;
+
+    &:hover {
+        background-color: $light-gray;
+    }
+
+    &.attention {
+        background: $main;
+        color: $white;
+
+        &:hover {
+            background: $darker-main;
+        }
+    }
+}
+
+#videoframe {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#start-video {
+    @include sm {
+        height: 100vh;
+    }
+
+    @include md {
+        width: 100vw;
+    }
+
+    top: 0;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100vw;
+}
+
+.blocks {
+    margin-top: 4em;
+    max-width: 1200px;
+}
+
+#products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.tags {
+    width: 300px;
+    padding: 3em 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @include lg {
+        border-right: 1px solid $gray;
+    }
+
+    @include md {
+        &:first-of-type {
+            border-right: 1px solid $gray;
+        }
+    }
+
+    &:last-of-type {
+        border-right: 0px;
+    }
+
+    span {
+        margin-top: 1em;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    svg {
+        color: $main;
+        font-size: 2em;
+        height: 2em;
+        fill: $main;
+    }
+}
+
+#banners {
+    a {
+        img {
+            max-width: 1200px;
+            width: 100%
+        }
+    }
+}
+
+#reservation {
+    width: 100vw;
+    max-width: none;
+    background-image: url('../../assets/background.jpg');
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    display: grid;
+
+    @include xl {
+        min-height: 507px;
+    }
+
+    img {
+        float: left;
+        position: absolute;
+        display: none;
+
+        @include xl {
+            display: block;
+        }
+    }
+
+    form {
+        max-width: 600px;
+        width: 100%;
+        justify-self: center;
+        align-self: center;
+        padding: 0 1em 1em 1em;
+        display: grid;
+    }
+
+    h1 {
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+
+    label {
+        text-transform: uppercase;
+        font-weight: 600;
+        white-space: nowrap;
+    }
+
+    input[type=text] {
+        width: 100%;
+        border: none;
+        color: $black;
+        padding: 0.5em;
+        outline: none;
+    }
+
+    textarea {
+        width: 100%;
+        border: none;
+        color: $black;
+        padding: 0.5em;
+        outline: none;
+    }
+
+    .form-row {
+        margin-bottom: 2em;
+    }
+
+    .btn{
+        justify-self: center;
+    }
+}
+
+footer{
+    text-align: center;
+    width: 100%;
+    background-color: $black;
+    fill: $white;
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 0.7em;
+    color: $white;
+    white-space: nowrap;
+    svg{
+        max-width: 300px;
+        width: 100vw;
+        text-align: center;
+    }
+
+    a{
+        color: $white;
+    }
+
+    #social-icons-block{
+        *{color: $main;}
         display: flex;
+        justify-content: center;
         align-items: center;
-        justify-content: space-between;
+        font-size: 2em;
     }
 }

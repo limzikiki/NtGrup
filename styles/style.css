@@ -12,7 +12,7 @@ body {
 	padding: 0;
 	font-family: "Roboto";
 	font-weight: 400;
-	font-size: 1.5em;
+	font-size: 1.5em;+
 	background-color: var(--bg-color);
 	-webkit-box-align: center;
 	-ms-flex-align: center;
@@ -259,8 +259,7 @@ p {
 .prodText {
 	max-width: 750px;
 	padding: 1em;
-	display: block;
-	overflow: auto;
+	overflow: hidden;
 	text-align: justify;
 	margin: auto;
 }
@@ -525,4 +524,17 @@ footer {
 }
 .ldio-7w3aa6oda29 div {
 	box-sizing: content-box;
+}
+
+.Prod__gallery{
+	height: 750px;
+	max-width: 750px;
+	width: 100%;
+	overflow: hidden;
+}
+
+.Prod__gallery_container{
+	display: flex;
+	justify-content: center;
+	background-color: var(--bg-color);
 }
