@@ -1,7 +1,7 @@
 		<script src='/js/js.js'></script>
 		<title>NT Grup - Metālkonstrukcijas</title>
 		<meta name="theme-color" contents="#9CC2CE">
-		<link rel='stylesheet' type='text/css' href='/styles/style.css'>
+		
 		<link rel="alternate" hreflang="ru" href="ru/" />
 		<link rel="alternate" hreflang="en" href="en/" />
 		<link rel="alternate" hreflang="lv" href="lv/" />
@@ -9,6 +9,7 @@
 		<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 		<link rel="stylesheet" href="/styles/splide-styles.css">
 		<link rel="stylesheet" href="/styles/gallery-overlay.css">
+		<link rel='stylesheet' type='text/css' href='/styles/style.css'>
 		</head>
 
 		<body>
@@ -111,6 +112,8 @@
 											<img v-bind:src="'https://ntgrup.lv'+photo.path" class="Prod__gallery_item "/>
 										</div>
 									</div>
+									<div class="swiper-button-prev"></div>
+    								<div class="swiper-button-next"></div>
 								</div>
 							</div>
 						</div>

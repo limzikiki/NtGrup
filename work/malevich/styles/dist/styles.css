@@ -60,8 +60,14 @@ a {
     background-color: #fefefe;
     color: #d11782;
   }
+  #header-wrap header {
+    padding-bottom: 2em;
+  }
   #header-wrap header .svg-inline--fa {
     font-size: 1.2em;
+  }
+  #header-wrap header div {
+    padding: 1em;
   }
 }
 @media (min-width: 600px) {
@@ -124,6 +130,7 @@ a {
   z-index: 2;
   background-color: #fefefe;
   width: 100%;
+  height: auto;
 }
 @media (max-width: 599px) {
   #header #mob-nav {
@@ -131,19 +138,26 @@ a {
     justify-content: space-between;
   }
 }
-#header #mob-nav svg {
-  width: 50vw;
-  max-width: 16em;
+#header #mob-nav #mb-logo-container {
+  position: static;
   display: block;
   z-index: 1;
   margin-right: 8px;
+  flex-grow: 1;
 }
-#header #mob-nav div {
+#header #mob-nav a {
+  width: auto;
+  flex-grow: 1;
+  text-align: center;
+  font-size: 2em;
+  padding-top: 1%;
+}
+#header #mob-nav #burger {
   height: 100%;
-  position: relative;
+  position: absolute;
   transform: translate(0, 10%);
 }
-#header #mob-nav div input {
+#header #mob-nav #burger input {
   height: 3em;
   width: 3em;
   position: absolute;
@@ -152,22 +166,22 @@ a {
   z-index: 2;
   opacity: 0;
 }
-#header #mob-nav div input:checked ~ span {
+#header #mob-nav #burger input:checked ~ span {
   background-color: #111;
 }
-#header #mob-nav div input:checked ~ span:nth-of-type(1) {
+#header #mob-nav #burger input:checked ~ span:nth-of-type(1) {
   transform: rotate(45deg);
   top: 12px;
 }
-#header #mob-nav div input:checked ~ span:nth-of-type(2) {
+#header #mob-nav #burger input:checked ~ span:nth-of-type(2) {
   transform: scale(0.1, 0.1);
   opacity: 0;
 }
-#header #mob-nav div input:checked ~ span:nth-of-type(3) {
+#header #mob-nav #burger input:checked ~ span:nth-of-type(3) {
   transform: rotate(-45deg);
   top: -8px;
 }
-#header #mob-nav div input ~ span {
+#header #mob-nav #burger input ~ span {
   position: relative;
   transition: top 0.5s, opacity 0.5s, background-color 0.5s, transform 0.5s;
   top: 5px;
@@ -265,16 +279,12 @@ a:hover {
 }
 
 #start-video {
+  width: 100%;
   top: 0;
 }
 @media (max-width: 599px) {
   #start-video {
-    height: 100vh;
-  }
-}
-@media (min-width: 600px) {
-  #start-video {
-    width: 100vw;
+    padding-top: 3.8em;
   }
 }
 
@@ -339,7 +349,7 @@ a:hover {
 #reservation {
   width: 100vw;
   max-width: none;
-  background-image: url("../../assets/background.jpg");
+  background-image: url("/assets/background.jpg");
   background-position-x: center;
   background-position-y: center;
   background-repeat: no-repeat;
