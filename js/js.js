@@ -1,6 +1,5 @@
 "use strict";
 $(function () {
-	window.t = $(".tiltle");
 	var ImgHeight = $("#img").height();
 	function sizes() {
 		let BrowserHeight = $(window).height();
@@ -23,7 +22,6 @@ $(function () {
 		$("#precomp").width(BrowserWidth);
 
 		$(".lg").width(BrowserWidth / 8.99);
-		var o = $(".companies").width() * -0.5;
 		$("#logocontainer").css("transform", "translate(" + 0 + "px)");
 	}
 

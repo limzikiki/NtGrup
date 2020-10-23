@@ -1,7 +1,7 @@
 		<script src='/js/js.js'></script>
 		<title>NT Grup - Metālkonstrukcijas</title>
 		<meta name="theme-color" contents="#9CC2CE">
-		
+
 		<link rel="alternate" hreflang="ru" href="ru/" />
 		<link rel="alternate" hreflang="en" href="en/" />
 		<link rel="alternate" hreflang="lv" href="lv/" />
@@ -109,11 +109,11 @@
 								<div v-if="(product.gallery != undefined) && (product.gallery.length > 0) " v-bind:class="['Prod__gallery', 'swiper'+key]">
 									<div class="swiper-wrapper">
 										<div v-for="photo in product.gallery" class="swiper-slide Prod__gallery_container">
-											<img v-bind:src="'https://ntgrup.lv'+photo.path" class="Prod__gallery_item "/>
+											<img v-bind:src="'https://ntgrup.lv'+photo.path" class="Prod__gallery_item " />
 										</div>
 									</div>
 									<div class="swiper-button-prev"></div>
-    								<div class="swiper-button-next"></div>
+									<div class="swiper-button-next"></div>
 								</div>
 							</div>
 						</div>
@@ -140,8 +140,8 @@
 						<div id="blocks">
 							<div class="block">
 								<div class="innerBlock">
-									<div id="contactsTitle" class="contTitles blockTitle"><?= $navigation[3]['title' . $lan] ?>
-									</div>
+									<h1 id="contactsTitle" class="contTitles blockTitle"><?= $navigation[3]['title' . $lan] ?>
+									</h1>
 									<div id="coverContacts">
 										<?php
 										foreach ($contacts as $contact) {
@@ -155,30 +155,6 @@
 										}
 										?>
 									</div>
-								</div>
-							</div>
-							<div class="block">
-								<div class="innerBlock">
-									<span class="blockTitle"><?= $form_translation[0]['field' . $lan] ?></span>
-									<br>
-									<p id="email_about">
-										<?= $form_translation[1]['field' . $lan] ?>
-									</p>
-									<form id="email">
-										<?= $form_translation[2]['field' . $lan] ?>:
-										<p>
-											<input type="text" name="name" require placeholder="<?= $form_translation[2]['field' . $lan] ?>" class="inputText topInp" id="name">
-										</p>
-										<?= $form_translation[3]['field' . $lan] ?>:
-										<p>
-											<input type="email" name="email" require class="inputText topInp" placeholder="<?= $form_translation[3]['field' . $lan] ?>">
-										</p>
-										<?= $form_translation[4]['field' . $lan] ?>:
-										<p><textarea name="message" rows="5" require cols="27" class="inputText textarea" placeholder="<?= $form_translation[4]['field' . $lan] ?>" height="100px"></textarea></p>
-										<input id="send" type='submit' value="<?= $form_translation[5]['field' . $lan] ?>">
-										<p id='succes'><?= $form_translation[6]['field' . $lan] ?></p>
-										<p id='fail'><?= $form_translation[7]['field' . $lan] ?></p>
-									</form>
 								</div>
 							</div>
 						</div>
@@ -196,11 +172,11 @@
 			<script src="/js/products-loader.js"></script>
 			<script src="/js/splide-init.js"></script>
 			<script>
-								var creationDate = new Date(2007, 5, 21);
-								var date = new Date();
-								var thisYear = Math.floor((date.valueOf() - creationDate.valueOf()) / (86400 * 1000 * 365));
-								$("#years").html(thisYear);
-							</script>
+				var creationDate = new Date(2007, 5, 21);
+				var date = new Date();
+				var thisYear = Math.floor((date.valueOf() - creationDate.valueOf()) / (86400 * 1000 * 365));
+				$("#years").html(thisYear);
+			</script>
 		</body>
 
 		</HTML>

@@ -19,7 +19,7 @@
 	<meta charset="utf-8">
 	<meta name="theme-color" contents="#000000">
 	<meta name="keywords" content="metālkonstrukcijas, Montāža, metālkonstrukcijas montāža, metala fermas, metālizstrādājumi, plazmas griešana, starpstāvu pārsegums">
-	<link rel="shortcut icon" href="./data/favicon.png" type="image/png">
+	<link rel="shortcut icon" href="/data/favicon.png" type="image/png">
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<link rel="alternate" hreflang="ru" href="./ru" />
 	<link rel="alternate" hreflang="en" href="./en" />
