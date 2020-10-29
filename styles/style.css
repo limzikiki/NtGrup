@@ -498,6 +498,20 @@ footer {
 	padding: 2% 0 0.1% 0;
 }
 
+#social{
+	position: fixed;
+	z-index:11;
+	padding: 0;
+}
+
+#social > .social-link{
+	display: flex;
+	align-items: center;
+	justify-content:center;
+	height: 50px;
+	width: 50px;
+}
+
 @keyframes ldio-7w3aa6oda29 {
 	0% {
 		transform: translate(-50%, -50%) rotate(0deg);

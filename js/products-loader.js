@@ -11,14 +11,15 @@ let swipers = [];
 Vue.config.productionTip = false;
 
 var app = new Vue({
-	el: "#premain",
+	el: "#container",
 	data() {
 		return {
-			posts: {},
+			posts: [],
+			socials: [],
 		};
 	},
 	mounted() {
-		this.loadProducts();
+		this.fetchEverything();
 	},
 	updated() {
 		this.posts.entries.forEach(function (v, k) {
@@ -37,6 +38,10 @@ var app = new Vue({
 		});
 	},
 	methods: {
+		fetchEverything() {
+			this.loadProducts();
+			this.loadSocialMedia();
+		},
 		loadProducts() {
 			axios
 				.get(
@@ -46,6 +51,27 @@ var app = new Vue({
 						lang
 				)
 				.then((response) => (this.posts = response.data));
+		},
+		loadSocialMedia() {
+			axios
+				.get(
+					"https://ntgrup.lv/cockpit/api/collections/get/social?token=" +
+						token
+				)
+				.then((response) => {
+					this.socials = response.data;
+					this.setSocialBlockPosition();
+				});
+		},
+		setSocialBlockPosition() {
+			const social = document.getElementById("social");
+			const oneLinkHeight = 50;
+			const topPosition =
+				window.innerHeight / 2 -
+				this.socials.entries.length * oneLinkHeight +
+				"px";
+			social.style.top = topPosition;
+			console.log(topPosition);
 		},
 	},
 });
