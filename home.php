@@ -18,7 +18,6 @@ $navigation = cockpit('collections')->find('navigation');
 $content = cockpit('collections')->find('content');
 //$products = cockpit('collections')->find('products');
 $contacts = cockpit('collections')->find('contacts');
-$form_translation = cockpit('collections')->find('leave_message');
 $gallery = cockpit('singletons')->getData('gallery');
 
 /*usort($products, function ($i1, $i2) {

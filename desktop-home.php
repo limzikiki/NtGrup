@@ -1,7 +1,6 @@
-		<script src='/js/js.js'></script>
+		<script src='/js/js.js?v=2'></script>
 		<title>NT Grup - Metālkonstrukcijas</title>
 		<meta name="theme-color" contents="#9CC2CE">
-
 		<link rel="alternate" hreflang="ru" href="ru/" />
 		<link rel="alternate" hreflang="en" href="en/" />
 		<link rel="alternate" hreflang="lv" href="lv/" />
@@ -9,7 +8,7 @@
 		<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 		<link rel="stylesheet" href="/styles/splide-styles.css">
 		<link rel="stylesheet" href="/styles/gallery-overlay.css">
-		<link rel='stylesheet' type='text/css' href='/styles/style.css'>
+		<link rel='stylesheet' type='text/css' href='/styles/style.css?v=2'>
 		</head>
 
 		<body>
@@ -67,35 +66,9 @@
 								</div>
 							</div>
 							<div id="precomp">
-								<div class="companies">
-									<div id="logocontainer">
-										<div class="logos">
-											<img src="/data/logos/laima.png" class="lg" id="">
-										</div>
-										<div class="logos" id="">
-											<img src="/data/logos/stats.svg" class="lg" id="">
-										</div>
-										<div class="logos">
-											<img src="/data/logos/lnk.png" class="lg" id="">
-										</div>
-										<div class="logos">
-											<img src="/data/logos/idl.png" class="lg" id="">
-										</div>
-										<div class="logos">
-											<img src="/data/logos/velve.svg" class="lg" id="">
-										</div>
-										<div class="logos">
-											<img src="/data/logos/pmg.png" class="lg" id="">
-										</div>
-										<div class="logos">
-											<img src="/data/logos/csdd.svg" class="lg" id="">
-										</div>
-										<div class="logos" id="1logo">
-											<img src="/data/logos/logo.png" class="lg" id="">
-										</div>
-										<div class="logos">
-											<img src="/data/logos/car.png" class="lg" id="">
-										</div>
+								<div id="companies" styles="left:1px">
+									<div v-for="logo in companies">
+										<img v-bind:src="'https://ntgrup.lv'+logo.path" class="lg">
 									</div>
 								</div>
 							</div>
@@ -172,7 +145,7 @@
 			<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 			<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
 			<script src="/js/gallery-overlay.js"></script>
-			<script src="/js/products-loader.js"></script>
+			<script src="/js/products-loader.js?v=2"></script>
 			<script src="/js/splide-init.js"></script>
 			<script>
 				var creationDate = new Date(2007, 5, 21);

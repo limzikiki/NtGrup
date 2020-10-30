@@ -26,7 +26,7 @@ $(function () {
 	}
 
 	//position
-	var p = 0;
+	/*var p = 0;
 	const f = $(".companies").width() * 0.55; //длина прокрутки больше число тем больше выйдет
 	var s = 0;
 
@@ -43,7 +43,7 @@ $(function () {
 			}
 		}
 		$("#logocontainer").css("transform", "translate(" + p + "px)");
-	}, 10);
+	}, 10);*/
 
 	var HH = $("section").height + 10;
 	$("#aboutus").css("margin-top", HH);
@@ -77,32 +77,5 @@ $(function () {
 			{ duration: 500, easing: "swing" }
 		);
 		return f;
-	});
-	function send_mail() {
-		$.ajax({
-			url: "./send_mail.php",
-			data: {
-				email: $("input[name=email]").val(),
-				name: $("input[name=name]").val(),
-				message: $("textarea[name=message]").val(),
-			},
-			method: "POST",
-			beforeSend: function (xhr) {
-				$("#send").attr("disabled", "");
-				document.querySelector("#email").reset();
-			},
-			success: function (data) {
-				console.log(data);
-				if (data === "succes") {
-					$("#succes").fadeIn();
-				} else {
-					$("#fail").fadeIn();
-				}
-			},
-		});
-	}
-	$("form#email").submit(function () {
-		send_mail();
-		return false;
 	});
 });

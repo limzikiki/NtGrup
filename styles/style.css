@@ -210,10 +210,6 @@ a {
 	text-align: center;
 }
 
-#precomp {
-	overflow: hidden;
-}
-
 #ab {
 	padding: 1em;
 	margin: auto;
@@ -232,6 +228,37 @@ a {
 
 #abstats {
 	margin-left: 5%;
+}
+
+/*
+ *
+ * Companies
+ *
+ */
+
+.lg{
+	width: 150px;
+}
+
+#precomp{
+	overflow-x: hidden;
+}
+
+#companies{
+	position: relative;
+	left: 1px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	width: fit-content;
+}
+
+#companies > div{
+	height: 200px;
+	width: 200px;
+	display: grid;
+	place-items: center;
 }
 
 h1 {
@@ -281,65 +308,6 @@ p {
 
 .text {
 	white-space: nowrap;
-}
-
-.atention {
-	font-weight: 700;
-	color: var(--attention);
-}
-
-.companies {
-	overflow: none;
-}
-
-#logocontainer {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-ms-flex-pack: distribute;
-	justify-content: space-around;
-}
-
-#send {
-	background: var(--attention);
-	border: 0;
-	height: 5vh;
-	padding: 0 1em;
-	color: var(--bg-color);
-	margin: auto;
-	min-height: 2em;
-	cursor: pointer;
-}
-
-#send:hover {
-	background: #95144b;
-}
-
-#send:active {
-	background: black;
-}
-
-#send:disabled {
-	background-color: var(--secondary_collor);
-	cursor: not-allowed;
-}
-
-.lg {
-	width: 150px;
-}
-
-.logos {
-	padding: 3%;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
-	align-items: center;
-}
-
-#message_block {
-	background-color: var(--bg-color);
 }
 
 #blocks {
